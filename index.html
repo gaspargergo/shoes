@@ -12,42 +12,25 @@
       margin-left: 250px;
       -webkit-transform: scaleX(-1);
       transform: scaleX(-1);
-      animation: leftShoe 1.5s infinite;
+      animation: step 1.5s infinite;
+      animation-delay: 0.75s;
+      opacity: 0;
     }
     #right{
-      animation: rightShoe 1.5s infinite;
+      animation: step 1.5s infinite;
     }
 
-    @keyframes leftShoe{
+    @keyframes step{
       0%{
-        transform: scaleX(-1) translateY(0px);
+        /*transform:translateY(0px);*/
         opacity: 0;
       }
-      40%{
-        transform: scaleX(-1) translateY(0px);
-        opacity: 0;
-      }
-      55%{
-        transform: scaleX(-1) translateY(5px);
-        opacity: 1;
-      }
-      100%{
-        transform: scaleX(-1) translateY(0px);
-        opacity: 0;
-      }
-    }
-
-    @keyframes rightShoe{
-      0%{
-        transform:translateY(0px);
-        opacity: 0;
-      }
-      15%{
-        transform:translateY(5px);
+      20%{
+        /*transform:translateY(5px);*/
         opacity: 1;
       }
       60%{
-        transform:translateY(0px);
+        /*transform:translateY(0px);*/
         opacity: 0;
       }
       100%{
