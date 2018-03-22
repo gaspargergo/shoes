@@ -9,15 +9,15 @@
       position: absolute;
     }
     #left{
-      margin-left: 250px;
       -webkit-transform: scaleX(-1);
       transform: scaleX(-1);
-      animation: step 1.5s infinite;
-      animation-delay: 0.75s;
+      animation: step 1.2s infinite;
+      animation-delay: 0.6s;
       opacity: 0;
     }
     #right{
-      animation: step 1.5s infinite;
+      margin-right: 250px;
+      animation: step 1.2s infinite;
     }
 
     @keyframes step{
@@ -50,17 +50,21 @@
       var shoes = document.getElementsByClassName("shoe");
 
       for(var i = 0; i < shoes.length;i++){
-        shoes[i].height = window.innerHeight*0.9;
+        shoes[i].width = window.innerWidth*0.15;
       }
 
       var container = document.getElementById("container");
       container.style.left = "50%";
-      var temp = ((window.innerHeight*0.9*0.35614803024)*2 + 250)/2 *-1; // calculating the width of the image by using the ratio
+      var temp = ((window.innerWidth*0.15)*2 + 250)/2 *-1;
       container.style.marginLeft = temp.toString(); 
 
       container.style.top = "50%";
-      temp = (window.innerHeight*0.9)/2*-1;
+      temp = (window.innerWidth*0.15*2.8046875)/2*-1;  // calculating the height of the image by using the ratio
       container.style.marginTop = temp;
+
+      var audio = new Audio('steps.wav');
+      audio.loop = true;
+      audio.play();
   </script>
 </body>
 </html>
